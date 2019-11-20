@@ -2,53 +2,56 @@ body {
     margin: 0;
     height: 100vh;
     // cursor: url('../images/custom.jpg'), auto;
-    background: black;
+    // background: black;
+    background-image: url("../images/demo-bg.jpg");
+
 }
 .cursor {
-    width: 20px;
-    height: 20px;
-    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgb(216, 214, 214);
     border-radius: 50%;
     position: absolute;
-    // transition-duration: 1ms;
+    opacity: .3;
+    transition-duration: 10ms;
     transition-timing-function: ease-out;
-    animation: cursorAnimate .5s infinite alternate;
+    // animation: cursorAnimate .5s infinite alternate;
 }
 
 .cursor::before {
     display: none;
 }
 
-.cursor:hover::after {
-    content: "";
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    border: 8px solid gray;
-    border-radius: 50%;
-    opacity: .5;
-    top: -8px;
-    left: -8px;
-    animation: cursorAnimate2 .5s infinite alternate;
-}
+// .cursor:hover::after {
+//     content: "";
+//     width: 20px;
+//     height: 20px;
+//     position: absolute;
+//     border: 8px solid gray;
+//     border-radius: 50%;
+//     opacity: .5;
+//     top: -8px;
+//     left: -8px;
+//     // animation: cursorAnimate2 .5s infinite alternate;
+// }
 
-@keyframes cursorAnimate {
-    from {
-        transform: scale(2);
-    }
-    to {
-        transform: scale(.7);;
-    }
-}
+// @keyframes cursorAnimate {
+//     from {
+//         transform: scale(2);
+//     }
+//     to {
+//         transform: scale(.7);;
+//     }
+// }
 
-@keyframes cursorAnimate2 {
-    from {
-        transform: scale(.7);
-    }
-    to {
-        transform: scale(1);;
-    }
-}
+// @keyframes cursorAnimate2 {
+//     from {
+//         transform: scale(.7);
+//     }
+//     to {
+//         transform: scale(1);;
+//     }
+// }
 // add this animation for click and associate it to class expand
 @keyframes cursorAnimate3 {
     0% {
@@ -62,11 +65,17 @@ body {
     }
 }
 
+@keyframes cursoranimated4 {
+    from {
+        transform: scale(4);
+    }
+    to {
+        transform: scale(4);
+    }
+}
 // class where add using javascript to our div
 .expand{
     animation: cursorAnimate3 .5s forwards;
     border: 1px solid red;
     background-position-y: left;
 }
-
-

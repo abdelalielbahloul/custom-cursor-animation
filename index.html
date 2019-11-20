@@ -8,7 +8,15 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body onload="hideCursor()">
-      <div class="cursor"></div>
+    <div class="cursor"></div>
+    <div class="container demo">
+      <div class="content">
+         <div id="large-header" class="large-header">
+            <canvas id="demo-canvas"></canvas>
+            <!-- <h1 class="main-title"><span class="thin">Explore</span> Space</h1> -->
+         </div>
+      </div>
+    </div>
     
 
       <script>
@@ -17,9 +25,8 @@
           document.addEventListener('mousemove', e => {
             // console.log(e);
             cursor.setAttribute('style', `
-                                            top: ${e.pageY - 10}px;
-                                            left: ${e.pageX - 10}px;
-                                            background: url('./images/custom.jpg');
+                                            top: ${e.pageY - 15}px;
+                                            left: ${e.pageX - 15}px;
                                         `);
           });
           document.addEventListener('click', () => {

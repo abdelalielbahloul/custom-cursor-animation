@@ -1,81 +1,24 @@
 body {
   margin: 0;
   height: 100vh;
-  background: black;
+  background-image: url("../images/demo-bg.jpg");
 }
 
 .cursor {
-  width: 20px;
-  height: 20px;
-  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #d8d6d6;
   border-radius: 50%;
   position: absolute;
+  opacity: .3;
+  -webkit-transition-duration: 10ms;
+          transition-duration: 10ms;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  -webkit-animation: cursorAnimate .5s infinite alternate;
-          animation: cursorAnimate .5s infinite alternate;
 }
 
 .cursor::before {
   display: none;
-}
-
-.cursor:hover::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  border: 8px solid gray;
-  border-radius: 50%;
-  opacity: .5;
-  top: -8px;
-  left: -8px;
-  -webkit-animation: cursorAnimate2 .5s infinite alternate;
-          animation: cursorAnimate2 .5s infinite alternate;
-}
-
-@-webkit-keyframes cursorAnimate {
-  from {
-    -webkit-transform: scale(2);
-            transform: scale(2);
-  }
-  to {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-  }
-}
-
-@keyframes cursorAnimate {
-  from {
-    -webkit-transform: scale(2);
-            transform: scale(2);
-  }
-  to {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-  }
-}
-
-@-webkit-keyframes cursorAnimate2 {
-  from {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes cursorAnimate2 {
-  from {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
 }
 
 @-webkit-keyframes cursorAnimate3 {
@@ -105,6 +48,28 @@ body {
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+
+@-webkit-keyframes cursoranimated4 {
+  from {
+    -webkit-transform: scale(4);
+            transform: scale(4);
+  }
+  to {
+    -webkit-transform: scale(4);
+            transform: scale(4);
+  }
+}
+
+@keyframes cursoranimated4 {
+  from {
+    -webkit-transform: scale(4);
+            transform: scale(4);
+  }
+  to {
+    -webkit-transform: scale(4);
+            transform: scale(4);
   }
 }
 
