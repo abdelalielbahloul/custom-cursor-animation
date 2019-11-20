@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body onload="hideCursor()">
+      <div class="cursor"></div>
+    
+
+      <script>
+          const cursor = document.querySelector('.cursor');
+
+          document.addEventListener('mousemove', e => {
+            // console.log(e);
+            cursor.setAttribute('style', `
+                                            top: ${e.pageY - 10}px;
+                                            left: ${e.pageX - 10}px;
+                                            background: url('./images/custom.jpg');
+                                        `);
+          });
+          document.addEventListener('click', () => {
+              cursor.classList.add('expand');
+              setTimeout(() => {
+                  cursor.classList.remove('expand'); //expire the animation after 500ms
+              }, 500)
+          });
+          document.addEventListener('mouseleave', () => {
+            hideCursor();
+          });
+          function hideCursor() {
+            cursor.setAttribute('style', 'display: none');
+          }
+      </script>
+</body>
+</html>
